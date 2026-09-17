@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mariana Rufo — Página Pessoal</title>
+  <meta name="description" content="Página pessoal de Mariana Laura Gonçalves Campos Rufo, estudante de Sistemas de Informação na UFLA.">
+
+  <!-- Bulma -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar site-nav is-sticky" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item brand-name" href="#topo">Mariana Rufo</a>
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="navMenu" class="navbar-menu">
+        <div class="navbar-end is-align-items-center">
+          <a class="navbar-item" href="#sobre">Sobre</a>
+          <a class="navbar-item" href="#habilidades">Habilidades</a>
+          <a class="navbar-item" href="#contato">Contato</a>
+          <div class="navbar-item">
+            <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema claro/escuro">
+              <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
+              <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="topo" class="hero-section">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column is-7">
+          <p class="eyebrow font-display is-italic">Estudante de Sistemas de Informação — UFLA</p>
+          <h1 class="font-display">Mariana Laura<br>Gonçalves Campos Rufo</h1>
+          <p class="lead">
+            Bem-vindo(a) à minha página pessoal. Aqui você encontra um pouco sobre mim,
+            as tecnologias com as quais trabalho e as formas de entrar em contato.
+          </p>
+        </div>
+        <div class="column is-5">
+          <div class="photo-frame">
+            <img src="assets/img/foto.jpg" alt="Foto de Mariana Rufo" class="photo-frame" style="object-fit:cover; border-style:solid;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sobre -->
+  <section id="sobre" class="content-section">
+    <div class="container">
+      <h2 class="section-title font-display">Sobre mim</h2>
+      <p class="about-text">
+        Desenvolvedora Full Stack e graduanda em Sistemas de Informação pela UFLA. 
+        Experiência no desenvolvimento e manutenção de aplicações web utilizando PHP, JavaScript e SQL Server. 
+        Atuação focada em performance, usabilidade (UX) e resolução de problemas técnicos. 
+        Possuo experiência em liderança de equipes e educação tecnológica.
+      </p>
+    </div>
+  </section>
+
+  <!-- Habilidades -->
+  <section id="habilidades" class="content-section">
+    <div class="container">
+      <h2 class="section-title font-display">Habilidades</h2>
+      <div>
+        <span class="skill-pill">HTML</span>
+        <span class="skill-pill">CSS</span>
+        <span class="skill-pill">JavaScript</span>
+        <span class="skill-pill">SQL</span>
+        <span class="skill-pill">PHP</span>
+        <span class="skill-pill">C++</span>
+        <span class="skill-pill">C#</span>
+        <span class="skill-pill">C</span>
+        <span class="skill-pill">jQuery</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="content-section">
+    <div class="container">
+      <h2 class="section-title font-display">Contato</h2>
+      <ul class="contact-list">
+        <li>
+          <span class="label">e-mail</span>
+          <a href="mailto:mariana.rufo@estudante.ufla.br">mariana.rufo@estudante.ufla.br</a>
+        </li>
+        <li>
+          <span class="label">github</span>
+          <a href="https://github.com/marianalaura" target="_blank" rel="noopener">marianalaura.github</a>
+        </li>
+        <li>
+          <span class="label">linkedin</span>
+          <a href="https://www.linkedin.com/in/mariana-rufo" target="_blank" rel="noopener">linkedin.com/in/mariana-rufo</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      Mariana Laura Gonçalves Campos Rufo · Sistemas de Informação, UFLA
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var burger = document.querySelector('.navbar-burger');
+      var menu = document.getElementById(burger.dataset.target);
+      burger.addEventListener('click', function () {
+        burger.classList.toggle('is-active');
+        menu.classList.toggle('is-active');
+      });
+    });
+  </script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

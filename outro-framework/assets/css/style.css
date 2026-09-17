@@ -1,0 +1,199 @@
+/* =========================================================
+   Mariana Rufo — Página Pessoal (versão Bulma)
+   Mesma paleta/tipografia da versão Bootstrap, por cima do Bulma
+   ========================================================= */
+
+:root {
+  --bg: #f7f6f2;
+  --surface: #ffffff;
+  --text: #20232b;
+  --muted: #5b6070;
+  --accent: #4c5c96;
+  --accent-soft: #e4e7f3;
+  --border: #e2e0d8;
+}
+
+[data-theme="dark"] {
+  --bg: #14161b;
+  --surface: #1b1e24;
+  --text: #ecece4;
+  --muted: #a7abba;
+  --accent: #8d97d6;
+  --accent-soft: #262a38;
+  --border: #2a2d35;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Work Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  line-height: 1.6;
+}
+
+.font-display { font-family: "Fraunces", Georgia, serif; }
+
+/* ---------- Navbar ---------- */
+.site-nav {
+  background: var(--bg) !important;
+  border-bottom: 1px solid var(--border);
+}
+
+.site-nav .navbar-item,
+.site-nav .navbar-link {
+  color: var(--muted) !important;
+  font-size: 0.95rem;
+  background: transparent !important;
+}
+
+.site-nav .navbar-item:hover {
+  color: var(--accent) !important;
+}
+
+.brand-name {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  color: var(--text) !important;
+  font-size: 1.15rem;
+}
+
+.navbar-burger span {
+  background-color: var(--text);
+}
+
+.theme-toggle {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 999px;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.theme-toggle:hover { border-color: var(--accent); }
+.theme-toggle svg { width: 18px; height: 18px; stroke: var(--text); }
+.theme-toggle .icon-moon { display: none; }
+[data-theme="dark"] .theme-toggle .icon-sun { display: none; }
+[data-theme="dark"] .theme-toggle .icon-moon { display: inline-block; }
+
+/* ---------- Hero ---------- */
+.hero-section { padding: 5.5rem 0 4rem; }
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.hero-section h1 {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 600;
+  line-height: 1.12;
+  margin-bottom: 0.9rem;
+  color: var(--text);
+}
+
+.hero-section p.lead {
+  color: var(--muted);
+  max-width: 40ch;
+  font-size: 1.05rem;
+}
+
+.photo-frame {
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 4 / 5;
+  border: 1.5px dashed var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  padding: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Substitua este bloco por:
+   <img src="assets/img/foto.jpg" alt="Foto de Mariana Rufo" class="photo-frame" style="object-fit:cover; border-style:solid;">
+*/
+
+/* ---------- Sections ---------- */
+.content-section {
+  padding: 3.5rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1.75rem;
+  color: var(--text);
+}
+
+.about-text {
+  max-width: 62ch;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.skill-pill {
+  display: inline-block;
+  padding: 0.45rem 1rem;
+  margin: 0 0.5rem 0.5rem 0;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.contact-list li {
+  display: flex;
+  gap: 0.75rem;
+  align-items: baseline;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.85rem;
+}
+
+.contact-list .label {
+  color: var(--muted);
+  min-width: 90px;
+  font-size: 0.85rem;
+  text-transform: lowercase;
+}
+
+.contact-list a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+}
+
+.contact-list a:hover { color: var(--accent); }
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 1.75rem 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+  background: var(--bg);
+}
